@@ -1,0 +1,47 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'returns.css' %}">
+    <title>Returns Calculate</title>
+</head>
+<body>
+    
+    <div class="main">
+        <h2>Hello , calculate your returns</h2>
+
+        <div class="content">
+            <form action="reCalculate">
+            {% csrf_token %}
+            <h2>Calculated Returns</h2>
+            <p>Select Investment Type</p>
+            <button>Monthly</button><button>One Time</button><br>
+            <p>Monthly Investment</p><input type="text" name="amount" placeholder="Amount" required>
+            <p>Expected returns(p.a)</p><input type="text" name="perce" placeholder="Expected returns %" required>
+            <p>Time Period</p><input type="text" name="years" placeholder=" In Years" required>
+                <br><br>
+            <input type="submit">
+        </form>
+        </div>
+    </div>
+
+
+    <div class="butn">
+        <button class="cta"><a href="{% url 'index' %}">Home</a>
+            <svg width="15px" height="10px" viewBox="0 0 13 10">
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9"></polyline>
+              </svg></button>
+    
+    <button class="cta"><a href="{% url 'home' %}">Back</a>
+        <svg width="15px" height="10px" viewBox="0 0 13 10">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+          </svg></button>
+    </div>
+
+</body>
+</html>

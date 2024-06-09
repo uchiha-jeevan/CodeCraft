@@ -1,0 +1,43 @@
+
+*{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+body{
+
+        /* Set the background image */
+        background: linear-gradient(to right, #ec6363, #7c7cd4);
+      
+}
+
+a{
+    color: whitesmoke;
+}
+button {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ffffff;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #dfdde4;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #725AC1;
+  }
+  
+  button:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #725AC1;
+  }
+  
+  button:active {
+    transform: scale(0.9);
+  }

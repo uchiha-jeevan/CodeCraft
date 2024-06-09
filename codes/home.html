@@ -1,0 +1,28 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <title>All-Programming</title>
+</head>
+<body>
+    <h3>Welcome to codes</h3>
+
+    <div class="main">
+        
+            <button class="btn"><a href="{% url 'basicmath' %}">Basic Math</a></button>
+            <button class="btn">Palinndrome</button>
+            <button class="btn">Prime Numbers</button>
+            <a href="{% url 'returns' %}">
+            <button class="btn">Calculate Returns</button>
+            </a>
+            <a href=""><button class="btn">fibanocci</button></a>
+            <a href="{% url 'here' %}"><button class="btn">Here</button></a>
+            <button>Back</button>
+        
+    </div>
+</body>
+</html>

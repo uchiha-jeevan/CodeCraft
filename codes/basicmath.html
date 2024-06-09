@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'basicmath.css' %}">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="main">
+
+
+        <div>
+            <form action="add" method="post">
+                {% csrf_token %}
+    
+                <h4>Addition</h4>
+                <input type="text" name="nu" placeholder="Enter Number" required>
+                <input type="text" name="mu" placeholder="Enter Number" required>
+                <input type="submit" name="add">
+                {{result}}
+            </form>
+        </div>
+        <br>
+        <div>
+            <form action="sub" method="post">
+                {% csrf_token %}
+    
+                <h4>Subtraction</h4>
+                <input type="text" name="ns" placeholder="Enter Number" required>
+                <input type="text" name="ms" placeholder="Enter Number" required>
+                <input type="submit">
+                {{subresult}}
+            </form>
+        </div>
+        <br>
+        <div>
+            <form action="mul" method="post">
+                {% csrf_token %}
+    
+                <h4>Multiplication</h4>
+                <input type="text" name="nl" placeholder="Enter Number" required>
+                <input type="text" name="ml" placeholder="Enter Number"  required>
+                <input type="submit">
+                {{mulresult}}
+            </form>
+        </div>
+        <br>
+        <div>
+            <form action="div" method="post">
+                {% csrf_token %}
+    
+                <h4>Division/Modulus</4><br><br>
+                <input type="text" name="nd" placeholder="Enter Number" required>
+                <input type="text" name="md" placeholder="Enter Number" required>
+                <input type="submit">
+                <p>Remainder {{divresult}} , Modulus {{modresult}}</p>
+            </form>
+        </div>    
+
+    </div>
+    
+    <div class="butn">
+        <button class="cta"><a href="{% url 'index' %}">Home</a>
+            <svg width="15px" height="10px" viewBox="0 0 13 10">
+                <path d="M1,5 L11,5"></path>
+                <polyline points="8 1 12 5 8 9"></polyline>
+              </svg></button>
+    
+    <button class="cta"><a href="{% url 'home' %}">Back</a>
+        <svg width="15px" height="10px" viewBox="0 0 13 10">
+            <path d="M1,5 L11,5"></path>
+            <polyline points="8 1 12 5 8 9"></polyline>
+          </svg></button>
+    </div>
+</body>
+</html>
